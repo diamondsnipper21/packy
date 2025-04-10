@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Medias extends Model
+{
+    public $table = 'medias';
+
+    protected $fillable = [
+        'type',
+        'path',
+        'ext',
+        'filename'
+    ];
+
+    public const OWNER_COMMUNITY = 'community';
+    public const OWNER_POST = 'post';
+    public const OWNER_SCHEDULED_POST = 'scheduled_post';
+    public const OWNER_COMMENT = 'comment';
+    public const OWNER_CHAT = 'chat';
+
+    public const TYPE_IMAGE = 'image';
+    public const TYPE_AUDIO = 'audio';
+    public const TYPE_VIDEO = 'video';
+    public const TYPE_PDF = 'pdf';
+    public const TYPE_FILE = 'file';
+}
